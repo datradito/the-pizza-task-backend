@@ -17,6 +17,7 @@ router.post('/tasks', auth, async (req, res) => {
     }
 })
 
+//For upgrades to the API
 // GET /tasks?completed=true
 // GET /tasks?limit=10&skip=20
 // GET /tasks?sortBy=createdAt:desc
