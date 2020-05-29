@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const menuSchema = new mongoose.Schema({
     pizzas:[
         {
-            name: {
+            description: {
                 type: String,
                 required: true,
                 trim: true
