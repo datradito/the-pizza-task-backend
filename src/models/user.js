@@ -33,6 +33,22 @@ const userSchema = new mongoose.Schema({
             }
         }
     },
+    phone: {
+        type: Number,
+        maxlength:16,
+        trim: true,
+        validate(value) {
+            if(!validator.isMobilePhone(value)) {
+                throw new Error('Phone number is invalid')
+            }
+        }
+    },
+    address: {
+        type: String,
+        maxlength:100,
+        default:'WITHOUT ADDRESS',
+        required:true,
+    },
     age: {
         type: Number,
         default: 0,
