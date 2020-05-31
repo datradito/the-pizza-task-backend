@@ -37,11 +37,11 @@ const userSchema = new mongoose.Schema({
         type: Number,
         maxlength:16,
         trim: true,
-        validate(value) {
-            if(!validator.isMobilePhone(value)) {
-                throw new Error('Phone number is invalid')
-            }
-        }
+        // validate() {
+        //     if(!validator.isMobilePhone(value)) {
+        //         throw new Error('Phone number is invalid')
+        //     }
+        // }
     },
     address: {
         type: String,
